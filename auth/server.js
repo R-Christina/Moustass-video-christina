@@ -1,5 +1,5 @@
-const app = require('./app');
-const { initDb } = require('./auth-db');
+const app = require('./src/app');
+const { initDb } = require('./src/auth-db');
 const PORT = 3000;
 
 initDb()

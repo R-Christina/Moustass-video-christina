@@ -1,0 +1,21 @@
+<header>
+  <div class="header-content">
+    <div class="logo">Moustass Vidéo</div>
+    <div class="user-info">
+      <span>Bonjour, <span id="displayName"></span></span>
+      <button class="btn danger" onclick="logout()">Déconnexion</button>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="dashboard-grid">
+    <div class="sidebar">
+      <div class="sidebar-item" data-link="create-message.html">✉️ Créer un message</div>
+      <div class="sidebar-item" data-link="dashboard.html">📥 Messages reçus</div>
+      <div class="sidebar-item" data-link="sent-messages.html">📤 Messages envoyés</div>
+    </div>
+
+    <div class="main-content" id="page-content"></div>
+  </div>
+</div>

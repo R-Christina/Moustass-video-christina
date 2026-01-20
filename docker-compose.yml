@@ -1,6 +1,22 @@
-version: "3.8"
-
 services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.2.0
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: adminpassword
+      KC_HEALTH_ENABLED: true
+    ports:
+      - "8080:8080"
+    command: start-dev
+    healthcheck:
+      test: ["CMD-SHELL", "exec 3<>/dev/tcp/127.0.0.1/8080 && echo -e 'GET /health/ready HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n' >&3 && grep 'overall status.*UP' <&3"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    volumes:
+      - keycloak-data:/opt/keycloak/data
+
   mysql:
     image: mysql:8
     environment:
@@ -12,7 +28,7 @@ services:
       - mysql-data:/var/lib/mysql
 
   auth:
-    build: .
+    build: ./auth
     ports:
       - "3000:3000"
     env_file:
@@ -20,5 +36,16 @@ services:
     depends_on:
       - mysql
 
+  front:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - ./front:/app
+    command: npx http-server -p 8081
+    ports:
+      - "8081:8081"
+    depends_on:
+      - auth
 volumes:
   mysql-data:
+  keycloak-data:

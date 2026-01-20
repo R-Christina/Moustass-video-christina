@@ -1,17 +1,18 @@
-const express = require("express");
-const { configureSecurity } = require("./config/security");
-const { configureSession } = require("./config/session");
-const { configurePassport } = require("./config/passport");
-const authRoutes = require("./route/auth-route");
+const express = require('express');
+const session = require('express-session');
+const passport = require('./config/passport'); // <- l’instance maintenant
+const authRoutes = require('./route/auth-route');
 
 const app = express();
 
-// Middlewares
-configureSecurity(app);
-configureSession(app);
-configurePassport(app);
+// Sessions
+app.use(session({ secret: 'secret', resave: false, saveUninitialized: true }));
+
+// Initialiser Passport
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Routes
-app.use("/", authRoutes);
+app.use('/', authRoutes);
 
 module.exports = app;
