@@ -7,7 +7,7 @@ const { requireAuth } = require("../middleware/auth-middleware");
 const DASHBOARD_URL =
   process.env.FRONTEND_URL || "http://localhost:8081/dashboard.html";
 const METADATA_URL =
-  process.env.METADATA_URL || "http://metadata-service:4000/users/sync";
+  process.env.METADATA_URL || "https://metadata-service:4000/users/sync";
 
 router.get(
   "/login",
