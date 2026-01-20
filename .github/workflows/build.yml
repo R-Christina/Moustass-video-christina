@@ -1,4 +1,4 @@
-name: Build
+name: SonarCloud
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  build:
+  sonar:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,3 +23,9 @@ jobs:
         run: |
           npm ci
           npm test -- --coverage
+
+      # ===== SONARCLOUD SCAN =====
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarqube-scan-action@v7
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
