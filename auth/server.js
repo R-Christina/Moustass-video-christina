@@ -1,6 +1,6 @@
 const express = require("express");
 const { initDb } = require("./auth-db");
-const authRoutes = require("./routes/authRoutes");
+const authRoutes = require("./route/auth-route");
 const { configureSecurity } = require("./config/security");
 const { configureSession } = require("./config/session");
 const { configurePassport } = require("./config/passport");
