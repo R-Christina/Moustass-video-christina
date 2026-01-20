@@ -1,18 +1,18 @@
 // tests/auth-route.test.js
-jest.mock('../service/auth-service');
+jest.mock('../src/service/auth-service');
 
-jest.mock('../config/passport', () => ({
+jest.mock('../src/config/passport', () => ({
   authenticate: jest.fn(() => (req, res, next) => next()),
 }));
 
-jest.mock('../middleware/auth-middleware', () => ({
+jest.mock('../src/middleware/auth-middleware', () => ({
   requireAuth: (req, res, next) => next(),
 }));
 
 const request = require('supertest');
 const express = require('express');
-const authRouter = require('../route/auth-route');
-const authService = require('../service/auth-service');
+const authRouter = require('../src/route/auth-route');
+const authService = require('../src/service/auth-service');
 
 describe('Auth Router', () => {
   let app;

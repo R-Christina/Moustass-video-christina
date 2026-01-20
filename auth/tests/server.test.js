@@ -1,5 +1,5 @@
 // Mock des routes pour les tests unitaires
-jest.mock('../route/auth-route', () => {
+jest.mock('../src/route/auth-route', () => {
   const express = require('express');
   const router = express.Router();
 
@@ -12,13 +12,13 @@ jest.mock('../route/auth-route', () => {
 });
 
 // Mock de la DB
-jest.mock('../auth-db', () => ({
+jest.mock('../src/auth-db', () => ({
   initDb: jest.fn().mockResolvedValue(true),
   logAudit: jest.fn().mockResolvedValue(true),
 }));
 
 const request = require('supertest');
-const app = require('../app'); // on importe app.js
+const app = require('../src/app'); // on importe app.js
 
 describe('Auth Service simple test', () => {
   it('GET /profile renvoie 401 si non connecté', async () => {

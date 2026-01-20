@@ -1,4 +1,4 @@
-const authService = require('../service/auth-service');
+const authService = require('../src/service/auth-service');
 
 describe('auth-service', () => {
   describe('normalizeUserProfile', () => {
