@@ -4,6 +4,7 @@ const passport = require('./config/passport'); // <- l’instance maintenant
 const authRoutes = require('./route/auth-route');
 
 const app = express();
+app.disable('x-powered-by');
 
 // Sessions
 app.use(session({ secret: 'secret', resave: false, saveUninitialized: true }));
