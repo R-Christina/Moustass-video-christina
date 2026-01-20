@@ -23,9 +23,3 @@ jobs:
         run: |
           npm ci
           npm test -- --coverage
-
-      # ===== SONARCLOUD (1 SEUL) =====
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarqube-scan-action@v7
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
