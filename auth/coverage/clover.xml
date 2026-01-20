@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1768945206114" clover="3.2.0">
-  <project timestamp="1768945206114" name="All files">
-    <metrics statements="75" coveredstatements="58" conditionals="50" coveredconditionals="40" methods="15" coveredmethods="6" elements="140" coveredelements="104" complexity="0" loc="75" ncloc="75" packages="5" files="8" classes="8"/>
+<coverage generated="1768945719884" clover="3.2.0">
+  <project timestamp="1768945719885" name="All files">
+    <metrics statements="75" coveredstatements="64" conditionals="50" coveredconditionals="44" methods="15" coveredmethods="9" elements="140" coveredelements="117" complexity="0" loc="75" ncloc="75" packages="5" files="8" classes="8"/>
     <package name="src">
       <metrics statements="18" coveredstatements="15" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="app.js" path="D:\mcci\Tp Samfat\Moustass-video-christina\auth\src\app.js">
@@ -70,9 +70,9 @@
       </file>
     </package>
     <package name="src.route">
-      <metrics statements="27" coveredstatements="14" conditionals="10" coveredconditionals="4" methods="5" coveredmethods="1"/>
+      <metrics statements="27" coveredstatements="20" conditionals="10" coveredconditionals="8" methods="5" coveredmethods="4"/>
       <file name="auth-route.js" path="D:\mcci\Tp Samfat\Moustass-video-christina\auth\src\route\auth-route.js">
-        <metrics statements="27" coveredstatements="14" conditionals="10" coveredconditionals="4" methods="5" coveredmethods="1"/>
+        <metrics statements="27" coveredstatements="20" conditionals="10" coveredconditionals="8" methods="5" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -93,12 +93,12 @@
         <line num="44" count="1" type="stmt"/>
         <line num="45" count="1" type="stmt"/>
         <line num="48" count="1" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="50" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="52" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="54" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="59" count="1" type="stmt"/>
       </file>
     </package>
