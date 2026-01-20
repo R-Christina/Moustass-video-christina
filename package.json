@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "jest": "jest",
     "test": "jest --coverage"
   },
   "keywords": [],

@@ -14,9 +14,9 @@ jobs:
         with:
           fetch-depth: 0 
       - name: Install dependencies
-        run: yarn
+        run: yarn install --frozen-lockfile
       - name: Test and coverage
-        run: yarn jest
+        run: yarn test --coverage
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v7
         env:
