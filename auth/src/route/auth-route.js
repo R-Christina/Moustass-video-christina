@@ -6,8 +6,8 @@ const { requireAuth } = require("../middleware/auth-middleware");
 
 const DASHBOARD_URL =
   process.env.FRONT_URL || "http://localhost:8081/dashboard.html";
-const METADATA_URL =
-  process.env.USER_URL || "http://user:4000/users/sync";
+const USER_URL =
+  process.env.USER_URL;
 
 router.get(
   "/login",
@@ -21,7 +21,7 @@ router.get(
     try {
       const user = authService.normalizeUserProfile(req.user);
 
-      await fetch(METADATA_URL, {
+      await fetch(USER_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
