@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1769101306460" clover="3.2.0">
-  <project timestamp="1769101306461" name="All files">
+<coverage generated="1769106638692" clover="3.2.0">
+  <project timestamp="1769106638692" name="All files">
     <metrics statements="16" coveredstatements="15" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="3" elements="26" coveredelements="21" complexity="0" loc="16" ncloc="16" packages="1" files="1" classes="1"/>
     <file name="user-service.js" path="D:\mcci\Tp Samfat\Moustass-video-christina\user\src\service\user-service.js">
       <metrics statements="16" coveredstatements="15" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="3"/>

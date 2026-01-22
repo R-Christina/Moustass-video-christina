@@ -1,5 +1,5 @@
 const app = require("./src/app");
-const { initDatabase } = require("./src/db");
+const { initDatabase } = require("./src/user-db");
 
 const PORT = 4000;
 

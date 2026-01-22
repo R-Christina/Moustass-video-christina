@@ -2,8 +2,7 @@ const express = require("express");
 const session = require("express-session");
 const cors = require("cors");
 
-const userRoutes = require("./routes/users");
-const healthRoutes = require("./routes/health");
+const userRoutes = require("./route/user-route");
 
 const app = express();
 app.disable("x-powered-by");
@@ -28,6 +27,5 @@ app.use(
 
 // Routes
 app.use("/users", userRoutes);
-app.use("/health", healthRoutes);
 
 module.exports = app;
