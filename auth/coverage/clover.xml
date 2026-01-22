@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1768945719884" clover="3.2.0">
-  <project timestamp="1768945719885" name="All files">
-    <metrics statements="75" coveredstatements="64" conditionals="50" coveredconditionals="44" methods="15" coveredmethods="9" elements="140" coveredelements="117" complexity="0" loc="75" ncloc="75" packages="5" files="8" classes="8"/>
+<coverage generated="1769099253659" clover="3.2.0">
+  <project timestamp="1769099253659" name="All files">
+    <metrics statements="75" coveredstatements="64" conditionals="48" coveredconditionals="42" methods="15" coveredmethods="9" elements="138" coveredelements="115" complexity="0" loc="75" ncloc="75" packages="5" files="8" classes="8"/>
     <package name="src">
       <metrics statements="18" coveredstatements="15" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="app.js" path="D:\mcci\Tp Samfat\Moustass-video-christina\auth\src\app.js">
@@ -70,16 +70,16 @@
       </file>
     </package>
     <package name="src.route">
-      <metrics statements="27" coveredstatements="20" conditionals="10" coveredconditionals="8" methods="5" coveredmethods="4"/>
+      <metrics statements="27" coveredstatements="20" conditionals="8" coveredconditionals="6" methods="5" coveredmethods="4"/>
       <file name="auth-route.js" path="D:\mcci\Tp Samfat\Moustass-video-christina\auth\src\route\auth-route.js">
-        <metrics statements="27" coveredstatements="20" conditionals="10" coveredconditionals="8" methods="5" coveredmethods="4"/>
+        <metrics statements="27" coveredstatements="20" conditionals="8" coveredconditionals="6" methods="5" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="8" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="10" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
