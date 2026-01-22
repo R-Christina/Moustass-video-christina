@@ -36,6 +36,16 @@ services:
     depends_on:
       - mysql
 
+  user:
+    build: ./user
+    ports:
+      - "4000:4000"
+    env_file:
+      - user/.env
+    depends_on:
+      - mysql
+      - vault
+
   front:
     image: node:20-alpine
     working_dir: /app
@@ -46,6 +56,19 @@ services:
       - "8081:8081"
     depends_on:
       - auth
+
+  vault:
+    image: vault:1.14.3
+    ports:
+      - "8200:8200"
+    environment:
+      VAULT_ADDR: http://127.0.0.1:8200
+    command: server -config=/vault/config/vault-config.hcl
+    volumes:
+      - ./vault/config:/vault/config
+      - vault-data:/vault/file
+
 volumes:
   mysql-data:
   keycloak-data:
+  vault-data:
