@@ -1,4 +1,4 @@
-const crypto = require("crypto");
+const crypto = require("node:crypto");
 const { pool } = require("../user-db");
 const vault = require("node-vault")({
   apiVersion: "v1",
